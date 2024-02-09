@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборка ПК Premium</title>
+    <style>
+body {
+    background: linear-gradient(45deg, #232323, #0f0f0f);
+    color: #ffffff; /* Изменяем цвет текста на белый */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #fcfcfc;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            to {
+                text-shadow: 0px 0px 10px #fcfcfc, 0px 0px 20px #fcfcfc, 0px 0px 30px #fcfcfc;
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            animation: slideInNav 1s forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideInNav {
+            from {
+                transform: translateY(-50px);
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            animation: fadeInNavItems 2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInNavItems {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid #fcfcfc;
+            color: #fcfcfc;
+        }
+
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            animation: fadeInSections 1s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInSections {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: #fcfcfc;
+            font-size: 2em;
+            margin-bottom: 10px;
+            animation: slideInHeaders 2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideInHeaders {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        p {
+            line-height: 1.6;
+            animation: fadeInText 2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            animation: slideInGallery 2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideInGallery {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            font-size: 0.8em;
+        }
+		
+/* Плавная подсветка текста при наведении курсора */
+section#about h2,
+section#about p {
+    color: #ffffff; /* Изменяем цвет текста на белый */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Добавляем плавность при изменении цвета текста и эффекта свечения */
+}
+
+section#about:hover h2,
+section#about:hover p {
+    color: #ffffff; /* Изменяем цвет текста на фиолетовый при наведении */
+    text-shadow: 0px 0px 10px #545454, 0px 0px 20px #545454, 0px 0px 30px #545454; /* Добавляем эффект свечения */
+}
+section#pricing h2,
+section#pricing p {
+    color: #ffffff; /* Изменяем цвет текста на белый */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Добавляем плавность при изменении цвета текста и эффекта свечения */
+}
+
+section#pricing:hover h2,
+section#pricing:hover p {
+    color: #ffffff; /* Изменяем цвет текста на фиолетовый при наведении */
+    text-shadow: 0px 0px 10px #545454, 0px 0px 20px #545454, 0px 0px 30px #545454; /* Добавляем эффект свечения */
+}
+section#contact h2,
+section#contact p {
+    color: #ffffff; /* Изменяем цвет текста на белый */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Добавляем плавность при изменении цвета текста и эффекта свечения */
+}
+
+section#contact:hover h2,
+section#contact:hover p {
+    color: #ffffff; /* Изменяем цвет текста на фиолетовый при наведении */
+    text-shadow: 0px 0px 10px #545454, 0px 0px 20px #545454, 0px 0px 30px #545454; /* Добавляем эффект свечения */
+}
+
+        /* Стили для ссылок */
+        .ass {
+            color: #f7f7f7; /* Цвет текста ссылки */
+            text-decoration: none; /* Убираем подчеркивание ссылок */
+        }
+
+        /* При наведении курсора меняем цвет */
+        .ass:hover {
+            color: white; /* Цвет текста при наведении курсора */
+            background-color: white; /* Цвет фона при наведении курсора */
+            transition: color 0.3s, background-color 0.3s; /* Плавное изменение цвета */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Добро пожаловать в Premium PC!</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#pricing">Цены и Условия</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+		<br>
+        <section id="about">
+            <h2>О нас</h2>
+<p>Мы создаем персональные компьютеры на заказ, учитывая все ваши пожелания.<br>Наша команда готова помочь вам создать идеальное компьютерное решение.<br>Мы предлагаем доступные цены, быструю сборку, честный сервис и осторожное обращение с вашими компонентами.<br>Свяжитесь с нами сегодня, чтобы начать работу над вашим компьютером мечты!</p>
+        </section>
+        <section id="pricing">
+		<p>
+<h2>Цены и Условия</h2><br>
+<strong>Оплата:</strong> Полная предварительная оплата требуется для заказа. Мы временно работаем онлайн и предоставляем все контактные данные после оплаты.<br><br>
+<strong>Обработка Заказа:</strong> После оплаты вы получите уведомление с данными для связи. Готовность заказа будет сообщена вам для его забора.<br><br>
+<strong>Подбор Комплектующих:</strong><br>
+   - Бюджетная Сборка: Укажите бюджет, и мы подберем компоненты для вашего игрового ПК.<br><br>
+   - Индивидуальная Сборка: Укажите ваши предпочтения, и мы соберем ПК с учетом ваших потребностей.<br><br>
+<strong>Советы и Консультации:</strong> Наши эксперты помогут вам с выбором компонентов и обеспечат профессиональные советы.<br><br>
+
+Свяжитесь с нами сегодня, чтобы начать создание вашего идеального ПК!</p>
+        </section>
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Если у вас есть вопросы или вы хотите узнать о наших услугах, не стесняйтесь обращаться к нам по следующей информации:</p>
+            <p>Email: freshadwiano2011@gmail.com<br>
+			Instagram: <a href="https://www.instagram.com/premium_pc_assembly/" target="_blank" class="ass" >Click</a> <--- <br>
+			Whatsapp:  <a href="https://wa.me/994557370071" target="_blank" class="ass" >Click</a> <--- <br>
+            Телефон: +994 557370071</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Premium PC Assembly. Все права защищены.</p>
+		<br>
+    </footer>
+</body>
+</html>
