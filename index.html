@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme Language Selector</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            animation: bounce 2s infinite alternate;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0; /* Убираем внешние отступы */
+            padding: 0; /* Убираем внутренние отступы */
+        }
+        .language-selector {
+            margin-top: 20px; /* Меньше отступ сверху */
+            text-align: center;
+            animation: slideInFromTop 1s ease-out;
+        }
+        .language-selector img {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #000;
+            border-radius: 50%;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .language-selector img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+            box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Анимации */
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Website</h1>
+    <div class="language-selector">
+        <a href="azerbaijani.html"><img src="https://cdn.countryflags.com/thumbs/azerbaijan/flag-round-250.png" alt="Azerbaijani"></a>
+        <a href="english.html"><img src="https://cdn.countryflags.com/thumbs/united-kingdom/flag-round-250.png" alt="English"></a>
+        <a href="russian.html"><img src="https://cdn.countryflags.com/thumbs/russia/flag-round-250.png" alt="Russian"></a>
+    </div>
+</body>
+</html>
